@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="icon" href="icon.png">
+    <title>Guess the number</title>
+</head>
+<body>
+    <center>
+    <img src="icon.png" class="icon">
+    <br>
+    <input class="input" id="input" type="number">
+    <br>
+    <button class="button" onclick="checkGuess()">Submit</button>
+    <br>
+    <p id="Result_text">No Result<p>
+    <br>
+    <button class="rest" onclick="reloadPage()">rest</button>
+
+</center>
+<script src="home.js"></script>
+<script>
+    function reloadPage() {
+        location.reload(); // This line reloads the page
+    }
+    document.getElementById("input").addEventListener("keyup", function(event) {
+   // 13 in the code of the enter key
+   if(event.keyCode == 13){
+    checkGuess()
+   }
+})
+</script>
+
+</body>
+</html>
